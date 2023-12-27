@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Ecommerce - API </title>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <link rel="stylesheet" href="config/style.css">
+  <link rel="icon" href="config/PHILIPE_1.ico" type="image/x-icon">
+
+</head>
+<body>
+  <h1>My Ecommerce - API </h1>
+
+  <form id="productForm">
+    <label for="name">Nome:</label>
+    <input type="text" id="name" required>
+
+    <label for="description">Descrição:</label>
+    <input type="text" id="description">
+
+    <label for="price">Preço: R$ </label>
+    <input type="number" id="price" step="0.01" required>
+
+    <label for="category">Categoria:</label>
+    <input type="text" id="category" required>
+
+    <button type="button" onclick="addProduct()">Adicionar Produto</button>
+  </form>
+
+  <ul id="productList"></ul>
+
+<script>
+  async function addProduct() {
+    const name = document.getElementById('name').value;
+    const description = document.getElementById('description').value;
+    const price = parseFloat(document.getElementById('price').value);
+    const category = document.getElementById('category').value;
+
+    const product = {
+      name: name,
+      description: description,
+      price: price,
+      category: category
+    };
+
+    const response = await saveProduct(product);
+    if (response.status === 201) {
+      displayProduct(response.data);
+    }
+  }
+
+  async function saveProduct(product) {
+    try {
+      const response = await axios.post('http://localhost:3000/products', product);
+      return response;
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+  async function fetchProducts() {
+    try {
+      const response = await axios.get('http://localhost:3000/products');
+      const products = response.data;
+      products.forEach(product => {
+        displayProduct(product);
+      });
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+  async function deleteProduct(productId) {
+    try {
+      const response = await axios.delete(`http://localhost:3000/products/${productId}`);
+      if (response.status === 200) {
+        const listItem = document.getElementById(`product_${productId}`);
+        listItem.remove();
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+  function displayProduct(product) {
+    const productList = document.getElementById('productList');
+    const listItem = document.createElement('li');
+    listItem.id = `product_${product.id}`;
+
+    listItem.innerHTML = `
+      <p><strong>Nome:</strong> ${product.name}</p>
+      <p><strong>Descrição:</strong> ${product.description}</p>
+      <p><strong>Preço:</strong> R$ ${product.price}</p>
+      <p><strong>Categoria:</strong> ${product.category}</p>
+      <button type="button" onclick="deleteProduct(${product.id})">Excluir</button>
+    `;
+
+    productList.appendChild(listItem);
+  }
+
+  fetchProducts();
+</script>
+
+</body>
+</html>

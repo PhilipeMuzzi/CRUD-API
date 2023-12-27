@@ -1,0 +1,19 @@
+# Logs
+logs
+*.log
+
+# Dependências
+node_modules/
+
+# Typescript compilado
+dist/
+*.tsbuildinfo
+
+# variáveis locais
+.env
+
+# para macOS
+.DS_Store
+
+# para Windows
+Thumbs.db
