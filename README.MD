@@ -2,9 +2,9 @@
 
 Esta API foi desenvolvida utilizando Node.js com Typescript, aproveitando a eficiência do Express para facilitar o desenvolvimento e manutenção do código.
 
-![Print 1](images/print1.PNG)
-![Print 2](images/print2.PNG)
-![Print 4](images/print4.PNG)
+![Print 1](images/print5.PNG)
+![Print 2](images/print4.PNG)
+![Print 4](images/print6.PNG)
 
 
 (Todas as informações para rodar o projeto localmente estão disponíveis abaixo:)
