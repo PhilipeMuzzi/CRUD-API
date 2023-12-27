@@ -4,7 +4,7 @@ Esta API foi desenvolvida utilizando Node.js com Typescript, aproveitando a efic
 
 ![Print 1](images/print1.PNG)
 ![Print 2](images/print2.PNG)
-![Print 3](images/print3.PNG)
+![Print 4](images/print3.PNG)
 
 
 (Todas as informações para rodar o projeto localmente estão disponíveis abaixo:)
