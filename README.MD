@@ -1,20 +1,22 @@
-# Projeto:
+# Projeto
 
-Esta API foi desenvolvida utilizando Node.js com Typescript, aproveitando a eficiência do Express para facilitar o desenvolvimento e manutenção do código.
+Este projeto consiste em uma API desenvolvida em Node.js com Typescript, utilizando o Express para simplificar o desenvolvimento e manutenção do código.
 
 ![Print 1](images/print5.PNG)
 ![Print 2](images/print4.PNG)
 ![Print 4](images/print6.PNG)
 
+## Estrutura do Projeto
 
+```plaintext
 src
-├── controllers
-│   └── ProductController.ts
-├── routes
-│   └── ProductRoutes.ts
-├── models
-│   └── ProductModel.ts
-└── server.ts
+|-- controllers
+|   `-- ProductController.ts
+|-- routes
+|   `-- ProductRoutes.ts
+|-- models
+|   `-- ProductModel.ts
+`-- server.ts
 
 
 (Todas as informações para rodar o projeto localmente estão disponíveis abaixo:)
@@ -40,27 +42,22 @@ src
 
 ## Instalação:
 
-1. Clone ou baixe esse repositório:
+git clone https://github.com/PhilipeMuzzi/loja.git
+cd loja
 
-- git clone https://github.com/PhilipeMuzzi/loja.git
+npm install
+npm install --save-dev @types/sequelize
+npm install --save-dev nodemon
+npx tsc --init
 
-2. cd loja 
+## Configurações do Banco de Dados (.env)
 
-3. npm install
+- **DB_HOST:** localhost
+- **DB_PORT:** 5432
+- **DB_USER:** seu_user
+- **DB_PASSWORD:** password_db
+- **DB_NAME:** database_name
 
-3. npm install --save-dev @types/sequelize (Para instalar sequelize, para fazer  conexão com PostgreSQL)
-
-4. npm install --save-dev nodemon
-
-5. npx tsc --init (para criar o arquivo de configuração do TypeScript tsconfig.json)
-
-4. Crie seu arquivo .env com suas informações para banco de dados:
-
-DB_HOST=localhost
-DB_PORT=5432
-DB_USER=seu_user
-DB_PASSWORD=password_db
-DB_NAME=database_name
 
 5. Use o comando " npx sequelize-cli db:migrate " (sem aspas) para realizar o migrate do banco de dados.
 
