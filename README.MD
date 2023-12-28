@@ -73,8 +73,9 @@ npm install --save-dev nodemon
 
 5. Use o comando " npx sequelize-cli db:migrate " (sem aspas) para realizar o migrate do banco de dados.
 
-6. npm start (para iniciar)
+Entre no diretório loja, que contém o script de start (cd loja)
 
+E execute: npm start (para iniciar)
 
 Acesse [http://localhost:3000](http://localhost:3000) para acessar a aplicação via index.html.
 
