@@ -48,7 +48,7 @@ cd loja
 npm install
 npm install --save-dev @types/sequelize
 npm install --save-dev nodemon
-npx tsc --init
+
 
 ## Configurações do Banco de Dados (.env)
 
