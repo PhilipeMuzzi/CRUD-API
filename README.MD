@@ -2,9 +2,9 @@
 
 Este projeto consiste em uma API desenvolvida em Node.js com Typescript, utilizando o Express para simplificar o desenvolvimento e manutenção do código.
 
-![Print 1](images/print5.PNG)
-![Print 2](images/print4.PNG)
-![Print 4](images/print6.PNG)
+![Tela 01](images/print5.PNG)
+![Tela 02](images/tela.PNG)
+![Tela 03](images/tela2.PNG)
 
 ## Estrutura do Projeto
 
