@@ -36,9 +36,11 @@ src
 ## Tecnologias Utilizadas:
 
 
-- [Node.js](https://nodejs.org/)
-- [npm](https://www.npmjs.com/) 
-- [PostgreSQL](https://www.postgresql.org/)
+- [Node.js]
+- [TypeScript]
+- [Express.JS]
+- [npm]
+- [PostgreSQL]
 
 ## Instalação:
 
