@@ -7,6 +7,16 @@ Esta API foi desenvolvida utilizando Node.js com Typescript, aproveitando a efic
 ![Print 4](images/print6.PNG)
 
 
+src
+├── controllers
+│   └── ProductController.ts
+├── routes
+│   └── ProductRoutes.ts
+├── models
+│   └── ProductModel.ts
+└── server.ts
+
+
 (Todas as informações para rodar o projeto localmente estão disponíveis abaixo:)
 
 
@@ -34,12 +44,15 @@ Esta API foi desenvolvida utilizando Node.js com Typescript, aproveitando a efic
 
 - git clone https://github.com/PhilipeMuzzi/loja.git
 
-
 2. cd loja 
-
 
 3. npm install
 
+3. npm install --save-dev @types/sequelize (Para instalar sequelize, para fazer  conexão com PostgreSQL)
+
+4. npm install --save-dev nodemon
+
+5. npx tsc --init (para criar o arquivo de configuração do TypeScript tsconfig.json)
 
 4. Crie seu arquivo .env com suas informações para banco de dados:
 
@@ -49,11 +62,9 @@ DB_USER=seu_user
 DB_PASSWORD=password_db
 DB_NAME=database_name
 
-
 5. Use o comando " npx sequelize-cli db:migrate " (sem aspas) para realizar o migrate do banco de dados.
 
-
-6. npm start
+6. npm start (para iniciar)
 
 
 Acesse [http://localhost:3000](http://localhost:3000) para acessar a aplicação via index.html.
